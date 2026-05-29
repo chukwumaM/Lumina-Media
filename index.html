@@ -4,265 +4,1157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumina Media</title>
+  <meta name="description" content="Reserve your free seat for Skill To Income, a premium webinar by Miracle (The Global Mira) on turning learned skills into portfolio, visibility, opportunities, and income.">
+  <meta name="keywords" content="Skill To Income, free webinar, Miracle The Global Mira, freelancing, portfolio, opportunities, skill monetization">
+  <meta name="author" content="Miracle (The Global Mira)">
+  <meta property="og:title" content="SKILL TO INCOME | Free Webinar">
+  <meta property="og:description" content="Why Most People Never Make Money From The Skills They Learn — discover the framework behind consistent opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%236A0DAD'/%3E%3Ctext x='80' y='330' fill='white' font-size='104' font-family='Arial' font-weight='700'%3ESKILL TO INCOME%3C/text%3E%3C/svg%3E">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SKILL TO INCOME — Free Webinar by Miracle (The Global Mira)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f0fa;
-      color: #333;
+    :root {
+      --primary: #6A0DAD;
+      --primary-dark: #42006f;
+      --secondary: #B57EDC;
+      --white: #ffffff;
+      --gray: #2f2f35;
+      --muted: #6c6473;
+      --soft: #faf7ff;
+      --line: rgba(106, 13, 173, 0.14);
+      --glass: rgba(255, 255, 255, 0.74);
+      --shadow: 0 24px 80px rgba(69, 15, 115, 0.16);
+      --radius-lg: 30px;
+      --radius-md: 22px;
+      --radius-sm: 16px;
     }
 
-    header {
-      background-color: #6a0dad; /* Brand purple */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(181, 126, 220, 0.32), transparent 34rem),
+        radial-gradient(circle at 82% 8%, rgba(106, 13, 173, 0.16), transparent 30rem),
+        linear-gradient(180deg, #fff 0%, #fbf7ff 45%, #fff 100%);
+      color: var(--gray);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      position: relative;
+      min-height: 100vh;
+      isolation: isolate;
+    }
+
+    .page-shell::before,
+    .page-shell::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 24rem;
+      height: 24rem;
+      border-radius: 999px;
+      background: rgba(181, 126, 220, 0.18);
+      filter: blur(18px);
+      animation: float-orb 12s ease-in-out infinite;
+    }
+
+    .page-shell::before {
+      left: -9rem;
+      top: 20rem;
+    }
+
+    .page-shell::after {
+      right: -10rem;
+      bottom: 14rem;
+      animation-delay: -5s;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.78);
+      border-bottom: 1px solid rgba(106, 13, 173, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--primary-dark);
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 15px;
       color: #fff;
-      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 14px 32px rgba(106, 13, 173, 0.28);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      color: #584e62;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 52px;
+      padding: 0 1.35rem;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #8a28d3 52%, var(--secondary));
+      box-shadow: 0 18px 42px rgba(106, 13, 173, 0.32);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 24px 52px rgba(106, 13, 173, 0.42);
+    }
+
+    .btn-secondary {
+      color: var(--primary-dark);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(106, 13, 173, 0.18);
+      box-shadow: 0 14px 34px rgba(69, 15, 115, 0.08);
+    }
+
+    .hero {
+      padding: 76px 0 72px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.52rem 0.85rem;
+      border: 1px solid rgba(106, 13, 173, 0.18);
+      border-radius: 999px;
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 14px 34px rgba(69, 15, 115, 0.08);
+      font-weight: 900;
+      font-size: 0.84rem;
+    }
+
+    .eyebrow-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #17b26a;
+      box-shadow: 0 0 0 8px rgba(23, 178, 106, 0.12);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 1.25rem 0 1rem;
+      color: #201827;
+      font-size: clamp(3.4rem, 8vw, 7rem);
+      line-height: 0.86;
+      letter-spacing: -0.085em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(135deg, var(--primary), #8f2bd6 55%, var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin-bottom: 1rem;
+      color: #28202e;
+      font-size: clamp(1.45rem, 3.2vw, 2.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+    }
+
+    .subheadline {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 1.6rem;
+    }
+
+    .event-pills {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.8rem;
+    }
+
+    .pill {
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 18px 50px rgba(69, 15, 115, 0.08);
+    }
+
+    .pill small {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .pill strong {
+      color: var(--primary-dark);
+      font-size: 0.98rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 560px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 42px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42)),
+        radial-gradient(circle at 82% 8%, rgba(181, 126, 220, 0.55), transparent 18rem);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 1.2rem;
+      border-radius: 34px;
+      background-image: linear-gradient(rgba(106, 13, 173, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(106, 13, 173, 0.08) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, #000, transparent 78%);
+    }
+
+    .steps-illustration {
+      position: absolute;
+      inset: 40px 28px 24px;
+    }
+
+    .step {
+      position: absolute;
+      left: var(--x);
+      bottom: var(--y);
+      width: var(--w);
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #5e0ca0, #a552e2);
+      box-shadow: 0 20px 42px rgba(106, 13, 173, 0.28);
+      font-weight: 900;
+      transform: translateY(18px);
+      opacity: 0;
+      animation: rise-in 700ms ease forwards;
+      animation-delay: var(--delay);
+    }
+
+    .step small {
+      display: block;
+      margin-top: 0.2rem;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .person {
+      position: absolute;
+      left: 47%;
+      bottom: 48%;
+      width: 74px;
+      height: 132px;
+      transform: rotate(-7deg);
+      animation: climb 4.8s ease-in-out infinite;
+    }
+
+    .head {
+      width: 38px;
+      height: 38px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: #3d2550;
+      box-shadow: inset -8px -4px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .body-shape {
+      width: 56px;
+      height: 62px;
+      margin: 4px auto 0;
+      border-radius: 24px 24px 12px 12px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    .leg {
+      position: absolute;
+      bottom: 0;
+      width: 18px;
+      height: 48px;
+      border-radius: 999px;
+      background: #3d2550;
+      transform-origin: top;
+    }
+
+    .leg-one {
+      left: 22px;
+      transform: rotate(22deg);
+    }
+
+    .leg-two {
+      right: 18px;
+      transform: rotate(-22deg);
+    }
+
+    .achievement {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 38px rgba(69, 15, 115, 0.14);
+      color: #3b2749;
+      font-weight: 900;
+      animation: float-card 5.5s ease-in-out infinite;
+    }
+
+    .achievement span {
+      display: grid;
+      width: 26px;
+      height: 26px;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: #17b26a;
+    }
+
+    .achievement.one { top: 54px; left: 30px; }
+    .achievement.two { top: 124px; right: 28px; animation-delay: -1s; }
+    .achievement.three { bottom: 122px; left: 24px; animation-delay: -2s; }
+    .achievement.four { right: 32px; bottom: 42px; animation-delay: -3s; }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 2.2rem;
       text-align: center;
     }
 
-    nav {
-      background-color: #4b0082;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
     }
 
     h2 {
-      color: #6a0dad;
+      color: #211629;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .glass-panel,
+    .card {
+      border: 1px solid rgba(106, 13, 173, 0.12);
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 22px 70px rgba(69, 15, 115, 0.1);
+    }
+
+    .problem-panel {
+      padding: clamp(1.4rem, 4vw, 3rem);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+
+    .equation {
+      margin: 0.4rem 0 2rem;
+      color: var(--primary);
+      font-size: clamp(2.6rem, 8vw, 6.3rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      font-weight: 900;
+    }
+
+    .problem-cards,
+    .learn-grid,
+    .audience-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .problem-cards {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 1.8rem;
+    }
+
+    .mini-card {
+      padding: 1.25rem;
+      border-radius: var(--radius-sm);
+      background: #fff;
+      border: 1px solid rgba(106, 13, 173, 0.1);
+      font-weight: 900;
+      color: #362541;
+    }
+
+    .muted {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .learn-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      position: relative;
+      padding: 1.35rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 80px rgba(69, 15, 115, 0.16);
+    }
+
+    .icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+      place-items: center;
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 14px 28px rgba(106, 13, 173, 0.24);
+      font-size: 1.25rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.55rem;
+      color: #2a1d33;
+      font-size: 1.08rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .story-wrap {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+      padding-left: 1.25rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 21px;
+      top: 18px;
+      bottom: 18px;
+      width: 2px;
+      background: linear-gradient(var(--secondary), var(--primary));
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 1.1rem 1.1rem 2rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid rgba(106, 13, 173, 0.1);
+      box-shadow: 0 16px 38px rgba(69, 15, 115, 0.07);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 22px;
+      width: 14px;
+      height: 14px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 5px rgba(181, 126, 220, 0.22);
+    }
+
+    .timeline-date {
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .timeline-title {
+      color: #271a31;
+      font-weight: 900;
+    }
+
+    .quote-card {
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border-radius: var(--radius-lg);
+      color: #fff;
+      background:
+        radial-gradient(circle at top right, rgba(181, 126, 220, 0.72), transparent 14rem),
+        linear-gradient(135deg, var(--primary-dark), var(--primary));
+      box-shadow: var(--shadow);
+    }
+
+    .quote-card p {
+      margin-bottom: 1.2rem;
+      font-size: clamp(1.65rem, 3vw, 2.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+    }
+
+    .audience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 1.1rem;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(106, 13, 173, 0.1);
+      box-shadow: 0 16px 40px rgba(69, 15, 115, 0.07);
+      font-weight: 800;
+    }
+
+    .check-item span {
+      display: grid;
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--primary);
+    }
+
+    .bonus {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.6rem, 5vw, 3.4rem);
+      border-radius: 36px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.22), transparent 12rem),
+        linear-gradient(135deg, #4a067d, var(--primary) 52%, #b57edc);
+      box-shadow: 0 30px 100px rgba(106, 13, 173, 0.28);
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: 0.72fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .gift {
+      display: grid;
+      width: min(260px, 100%);
+      aspect-ratio: 1;
+      place-items: center;
+      margin: auto;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      font-size: 7rem;
+      animation: gift-pop 3.2s ease-in-out infinite;
+    }
+
+    .bonus h2,
+    .final-cta h2 {
+      color: #fff;
+    }
+
+    .value-tag {
+      display: inline-flex;
+      margin: 0.5rem 0 1rem;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      font-weight: 900;
+    }
+
+    .final-cta {
+      padding: clamp(2rem, 5vw, 4rem);
+      border-radius: 36px;
+      text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(rgba(37, 9, 58, 0.68), rgba(37, 9, 58, 0.68)),
+        radial-gradient(circle at top, rgba(181, 126, 220, 0.62), transparent 20rem),
+        linear-gradient(135deg, var(--primary-dark), var(--primary));
+      box-shadow: var(--shadow);
+    }
+
+    .final-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .final-details span {
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-weight: 900;
     }
 
     footer {
-      background-color: #4b0082;
-      color: white;
+      padding: 46px 0 94px;
+      border-top: 1px solid rgba(106, 13, 173, 0.1);
+      background: rgba(255, 255, 255, 0.62);
       text-align: center;
-      padding: 1.5rem;
     }
 
-    .cta-button {
-      display: inline-block;
-      background-color: #6a0dad;
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 1rem;
+    .hosted {
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 1.15rem;
     }
 
-    form {
+    .socials {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin-top: 1rem;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.2rem 0;
     }
 
-    input, textarea, select, button {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+    .socials a {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--primary);
+      background: #fff;
+      border: 1px solid rgba(106, 13, 173, 0.12);
+      box-shadow: 0 12px 30px rgba(69, 15, 115, 0.08);
+      transition: transform 180ms ease, color 180ms ease, background 180ms ease;
     }
 
-    button {
-      background-color: #6a0dad;
-      color: white;
-      border: none;
-      cursor: pointer;
+    .socials a:hover {
+      transform: translateY(-3px);
+      color: #fff;
+      background: var(--primary);
     }
 
-    button:hover {
-      background-color: #5a009c;
+    .sticky-mobile-cta {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 30;
+      display: none;
+      justify-content: center;
+      padding: 0.65rem;
+      border: 1px solid rgba(255, 255, 255, 0.86);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(69, 15, 115, 0.24);
     }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
+    .sticky-mobile-cta .btn {
+      width: 100%;
+    }
+
+    @keyframes rise-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes climb {
+      0%, 100% { transform: translate(0, 0) rotate(-7deg); }
+      50% { transform: translate(12px, -16px) rotate(3deg); }
+    }
+
+    @keyframes float-orb {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(16px, -22px, 0) scale(1.08); }
+    }
+
+    @keyframes gift-pop {
+      0%, 100% { transform: rotate(-3deg) scale(1); }
+      50% { transform: rotate(4deg) scale(1.04); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
       }
 
-      section {
-        padding: 1rem;
+      .hero-grid,
+      .story-wrap,
+      .bonus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-visual {
+        min-height: 520px;
+      }
+
+      .event-pills,
+      .learn-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .nav .btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 38px 0 54px;
+      }
+
+      h1 {
+        font-size: clamp(3.15rem, 17vw, 5rem);
+      }
+
+      .subtitle {
+        font-size: clamp(1.55rem, 8vw, 2.2rem);
+      }
+
+      .hero-actions .btn,
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .event-pills,
+      .problem-cards,
+      .learn-grid,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+        border-radius: 28px;
+      }
+
+      .steps-illustration {
+        inset: 28px 16px 18px;
+      }
+
+      .step {
+        font-size: 0.82rem;
+        padding: 0.82rem;
+      }
+
+      .achievement {
+        font-size: 0.76rem;
+        padding: 0.64rem 0.72rem;
+      }
+
+      .achievement.one { top: 30px; left: 14px; }
+      .achievement.two { top: 94px; right: 12px; }
+      .achievement.three { bottom: 98px; left: 12px; }
+      .achievement.four { right: 14px; bottom: 22px; }
+
+      .person {
+        left: 44%;
+        bottom: 48%;
+        width: 64px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      .bonus {
+        border-radius: 28px;
+      }
+
+      .gift {
+        width: 180px;
+        font-size: 5rem;
+      }
+
+      .sticky-mobile-cta {
+        display: flex;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Lumina Media</h1>
-    <p>Illuminate Your Brand. Dominate the Media Space.</p>
-  </header>
+  <div class="page-shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container nav-inner">
+        <a class="brand" href="#hero" aria-label="Skill To Income home">
+          <span class="brand-mark">↗</span>
+          <span>Skill To Income</span>
+        </a>
+        <div class="nav-links" aria-label="Page sections">
+          <a href="#problem">Problem</a>
+          <a href="#learn">What You'll Learn</a>
+          <a href="#story">My Story</a>
+          <a href="#bonus">Bonus</a>
+        </div>
+        <a class="btn btn-primary" href="https://forms.gle/gm9p3QCxVXExQp6u9" target="_blank" rel="noopener">Reserve My Seat</a>
+      </div>
+    </nav>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#coaching">Coaching</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Free live webinar • Limited seats</div>
+            <h1>Skill <span>To Income</span></h1>
+            <p class="subtitle">Why Most People Never Make Money From The Skills They Learn</p>
+            <p class="subheadline">The exact framework that helped me go from learning a skill to landing opportunities and working with multiple clients.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://forms.gle/gm9p3QCxVXExQp6u9" target="_blank" rel="noopener">Reserve My Seat →</a>
+              <a class="btn btn-secondary" href="#problem">Learn More</a>
+            </div>
+            <div class="event-pills" aria-label="Webinar details">
+              <div class="pill"><small>Date</small><strong>June 13th</strong></div>
+              <div class="pill"><small>Time</small><strong>7:00 PM WAT</strong></div>
+              <div class="pill"><small>Price</small><strong>FREE</strong></div>
+              <div class="pill"><small>Access</small><strong>Limited Slots</strong></div>
+            </div>
+          </div>
 
-  <section id="home">
-    <h2>Welcome to Lumina Media</h2>
-    <p>We help brands like yours transform inconsistent online presence into magnetic content, loyal communities, and media that sells. Whether you're a business ready to outsource or an aspiring media professional seeking clarity—we have a solution tailored for you.</p>
-    <a href="#services" class="cta-button">Explore Our Services</a>
-    <a href="#coaching" class="cta-button">Join Our Coaching</a>
-  </section>
+          <div class="hero-visual" aria-label="Illustration of a person climbing steps from learning to income">
+            <div class="steps-illustration">
+              <div class="achievement one"><span>✓</span> First Opportunity</div>
+              <div class="achievement two"><span>✓</span> Portfolio Built</div>
+              <div class="achievement three"><span>✓</span> Client Acquired</div>
+              <div class="achievement four"><span>✓</span> Consistent Income</div>
 
-  <section id="about">
-    <h2>About Lumina Media</h2>
-    <p>Lumina Media was founded by Chukwuma Miracle also known as The Global Mira, a certified social media expert turned visionary entrepreneur. We are a hybrid agency and coaching platform offering brand transformation services and media education for aspiring professionals.</p>
-  </section>
+              <div class="step" style="--x: 3%; --y: 10%; --w: 38%; --delay: 80ms;">Learning <small>Start with clarity</small></div>
+              <div class="step" style="--x: 18%; --y: 24%; --w: 40%; --delay: 210ms;">Portfolio <small>Show proof</small></div>
+              <div class="step" style="--x: 32%; --y: 38%; --w: 43%; --delay: 340ms;">Visibility <small>Get seen</small></div>
+              <div class="step" style="--x: 45%; --y: 52%; --w: 45%; --delay: 470ms;">Opportunities <small>Open doors</small></div>
+              <div class="step" style="--x: 58%; --y: 68%; --w: 38%; --delay: 600ms;">Income <small>Earn consistently</small></div>
 
-  $1
+              <div class="person" aria-hidden="true">
+                <div class="head"></div>
+                <div class="body-shape"></div>
+                <div class="leg leg-one"></div>
+                <div class="leg leg-two"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <button onclick="payForStarter()" class="cta-button">Pay ₦150,000 (Starter)</button>
-  <button onclick="payForGrowth()" class="cta-button">Pay ₦250,000 (Growth)</button>
-  <button onclick="payForPremium()" class="cta-button">Pay ₦400,000+ (Premium)</button>
-</section>
+      <section class="section" id="problem">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">The Problem</span>
+            <h2>The Problem Is Not Learning A Skill</h2>
+          </div>
+          <div class="glass-panel problem-panel">
+            <div class="equation">Information ≠ Results</div>
+            <div class="problem-cards">
+              <div class="mini-card">You learned the skill.</div>
+              <div class="mini-card">You completed the course.</div>
+              <div class="mini-card">You still don't know what to do next.</div>
+            </div>
+            <p class="muted">Most people don't have an information problem. They have an implementation problem.</p>
+          </div>
+        </div>
+      </section>
 
-  <section id="coaching">
-    <h2>Clarity Coaching Program</h2>
-    <p>Learn to become an in-demand social media manager. A 4-week live program teaching content creation, strategy, client systems, pricing, and more.</p>
-    <p>Includes: lessons, live calls, templates, certificate, and private group support.</p>
-    <p><strong>Program Fee:</strong> ₦25,000 early bird | ₦30,000 standard</p>
-    <a href="#contact" class="cta-button">Join the Waitlist</a>
-  <button onclick="payWithPaystackStandard()" class="cta-button">Pay ₦30,000 (Standard)</button>
-<button onclick="payWithPaystackEarlyBird()" class="cta-button">Pay ₦25,000 (Early Bird)</button>
+      <section class="section" id="learn">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">What You Will Learn</span>
+            <h2>A practical framework for turning skill into opportunity</h2>
+          </div>
+          <div class="learn-grid">
+            <article class="card">
+              <div class="icon">01</div>
+              <h3>Why most people stay stuck after learning a skill</h3>
+              <p class="muted">Identify the hidden gap between consuming information and creating outcomes.</p>
+            </article>
+            <article class="card">
+              <div class="icon">02</div>
+              <h3>The 4 stages that keep talented people invisible</h3>
+              <p class="muted">See where you are now and what must change to move forward.</p>
+            </article>
+            <article class="card">
+              <div class="icon">03</div>
+              <h3>How I got my first opportunity after training</h3>
+              <p class="muted">Learn the real-world positioning steps that created momentum.</p>
+            </article>
+            <article class="card">
+              <div class="icon">04</div>
+              <h3>The system behind consistent opportunities</h3>
+              <p class="muted">Build repeatable visibility instead of waiting and hoping.</p>
+            </article>
+            <article class="card">
+              <div class="icon">05</div>
+              <h3>What to do after learning a skill</h3>
+              <p class="muted">Turn your knowledge into proof, positioning, and clear next actions.</p>
+            </article>
+            <article class="card">
+              <div class="icon">06</div>
+              <h3>How to stop overthinking and start implementing</h3>
+              <p class="muted">Create simple execution habits that make you visible to opportunities.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<script src="https://js.paystack.co/v1/inline.js">  function payForStarter() {
-    var handler = PaystackPop.setup({
-      key: 'pk_test_6141b85a9f91c3f1a04c5c65127d04c262500b58',
-      email: 'miraclec613@gmail.com',
-      amount: 15000000,
-      currency: 'NGN',
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response) {
-        alert('Starter Package Payment successful. Transaction reference: ' + response.reference);
-      },
-      onClose: function() {
-        alert('Payment window closed.');
-      }
-    });
-    handler.openIframe();
-  }
+      <section class="section" id="story">
+        <div class="container story-wrap">
+          <div>
+            <div class="section-header" style="text-align: left; margin-left: 0;">
+              <span class="section-kicker">My Story</span>
+              <h2>From learning to landing real opportunities</h2>
+            </div>
+            <div class="timeline" aria-label="Miracle's timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">November 2024</div>
+                <div class="timeline-title">Learned Social Media Management</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">January 2025</div>
+                <div class="timeline-title">Built Portfolio</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">February 2025</div>
+                <div class="timeline-title">Landed First Opportunity</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2025–2026</div>
+                <div class="timeline-title">Worked With Multiple Clients</div>
+              </div>
+            </div>
+          </div>
+          <aside class="quote-card">
+            <p>“Out of everyone that learned with me, I was the only one that came back with a job.”</p>
+            <span>— Miracle (The Global Mira)</span>
+          </aside>
+        </div>
+      </section>
 
-  function payForGrowth() {
-    var handler = PaystackPop.setup({
-      key: 'pk_test_6141b85a9f91c3f1a04c5c65127d04c262500b58',
-      email: 'miraclec613@gmail.com',
-      amount: 25000000,
-      currency: 'NGN',
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response) {
-        alert('Growth Package Payment successful. Transaction reference: ' + response.reference);
-      },
-      onClose: function() {
-        alert('Payment window closed.');
-      }
-    });
-    handler.openIframe();
-  }
+      <section class="section" id="for-you">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Who This Webinar Is For</span>
+            <h2>If you have the skill but need direction, this is for you</h2>
+          </div>
+          <div class="audience-grid">
+            <div class="check-item"><span>✓</span> People who have learned a skill but struggle to get opportunities</div>
+            <div class="check-item"><span>✓</span> Students looking for direction</div>
+            <div class="check-item"><span>✓</span> Graduates trying to get their first opportunity</div>
+            <div class="check-item"><span>✓</span> Freelancers struggling with consistency</div>
+            <div class="check-item"><span>✓</span> Creators trying to monetize their skills</div>
+          </div>
+        </div>
+      </section>
 
-  function payForPremium() {
-    var handler = PaystackPop.setup({
-      key: 'pk_test_6141b85a9f91c3f1a04c5c65127d04c262500b58',
-      email: 'miraclec613@gmail.com',
-      amount: 40000000,
-      currency: 'NGN',
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response) {
-        alert('Premium Package Payment successful. Transaction reference: ' + response.reference);
-      },
-      onClose: function() {
-        alert('Payment window closed.');
-      }
-    });
-    handler.openIframe();
-  }
+      <section class="section" id="bonus">
+        <div class="container">
+          <div class="bonus">
+            <div class="bonus-grid">
+              <div class="gift" aria-hidden="true">🎁</div>
+              <div>
+                <span class="section-kicker" style="color: rgba(255,255,255,0.78);">Special Bonus</span>
+                <h2>Stay Until The End</h2>
+                <p style="font-size: 1.25rem; line-height: 1.6; font-weight: 800;">One attendee will win a FREE 1-on-1 Consultation Session.</p>
+                <div class="value-tag">Value: ₦30,000</div>
+                <p style="max-width: 620px; color: rgba(255,255,255,0.82); line-height: 1.75;">A personal strategy session where we'll review your situation and identify your next steps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-$1
-<script>
-  function payWithPaystackStandard() {
-    var handler = PaystackPop.setup({
-      key: 'pk_test_6141b85a9f91c3f1a04c5c65127d04c262500b58',
-      email: 'miraclec613@gmail.com',
-      amount: 3000000, // ₦30,000
-      currency: 'NGN',
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response) {
-        alert('Standard Payment successful. Transaction reference: ' + response.reference);
-      },
-      onClose: function() {
-        alert('Payment window closed.');
-      }
-    });
-    handler.openIframe();
-  }
+      <section class="section" id="reserve">
+        <div class="container">
+          <div class="final-cta">
+            <h2>Nothing Changes If Nothing Changes</h2>
+            <p style="max-width: 720px; margin: 0 auto; color: rgba(255,255,255,0.82); line-height: 1.75;">Reserve your free seat today and discover the framework behind consistent opportunities.</p>
+            <div class="final-details">
+              <span>June 13th</span>
+              <span>7:00 PM WAT</span>
+              <span>50 Slots Only</span>
+            </div>
+            <div class="cta-actions" style="justify-content: center;">
+              <a class="btn btn-primary" href="https://forms.gle/gm9p3QCxVXExQp6u9" target="_blank" rel="noopener">Reserve My Seat →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  function payWithPaystackEarlyBird() {
-    var handler = PaystackPop.setup({
-      key: 'pk_test_6141b85a9f91c3f1a04c5c65127d04c262500b58',
-      email: 'miraclec613@gmail.com',
-      amount: 2500000, // ₦25,000
-      currency: 'NGN',
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response) {
-        alert('Early Bird Payment successful. Transaction reference: ' + response.reference);
-      },
-      onClose: function() {
-        alert('Payment window closed.');
-      }
-    });
-    handler.openIframe();
-  }
-</script>
+    <footer>
+      <div class="container">
+        <p class="hosted">Hosted By: Miracle (The Global Mira)</p>
+        <p class="muted">From Learning → Positioning → Opportunities → Income</p>
+        <div class="socials" aria-label="Social media links">
+          <a href="https://www.instagram.com/luminamedia" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 9.5V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 20v-5.8c0-2.7 1.7-4.7 4.3-4.7s4.2 1.8 4.2 4.9V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6.5" cy="5.5" r="1.7" fill="currentColor"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+        <small>© 2026 Skill To Income. Built for clarity, positioning, and opportunities.</small>
+      </div>
+    </footer>
 
-</section>
-<section id="contact">
-    <h2>Work With Us</h2>
-    <p>Ready to transform your brand or career? Let’s talk. Fill the form below or book a call.</p>
-
-    <form action="https://formspree.io/f/xovwnzne" method="POST" onsubmit="window.location.href='https://calendly.com/luminamedia-booking'; return false;">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="service">What are you interested in?</label>
-      <select id="service" name="service">
-        <option value="media">Media Services</option>
-        <option value="coaching">Coaching Program</option>
-        <option value="both">Both</option>
-      </select>
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <p>Email: miraclec613@gmail.com</p>
-    <p>Instagram: @luminamedia</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Lumina Media. Built with clarity. Driven by creativity.</p>
-  </footer>
+    <div class="sticky-mobile-cta" aria-label="Sticky registration button">
+      <a class="btn btn-primary" href="https://forms.gle/gm9p3QCxVXExQp6u9" target="_blank" rel="noopener">Reserve My Free Seat</a>
+    </div>
+  </div>
 </body>
 
 </html>
